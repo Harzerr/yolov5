@@ -1,0 +1,30 @@
+2023-11-07 19:36:52,767 INFO    MainThread:20168 [wandb_setup.py:_flush():76] Current SDK version is 0.15.12
+2023-11-07 19:36:52,767 INFO    MainThread:20168 [wandb_setup.py:_flush():76] Configure stats pid to 20168
+2023-11-07 19:36:52,767 INFO    MainThread:20168 [wandb_setup.py:_flush():76] Loading settings from C:\Users\29660\.config\wandb\settings
+2023-11-07 19:36:52,767 INFO    MainThread:20168 [wandb_setup.py:_flush():76] Loading settings from D:\final-design\yolov5-mask-42-master\yolov5-mask-42-master\wandb\settings
+2023-11-07 19:36:52,767 INFO    MainThread:20168 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-11-07 19:36:52,767 INFO    MainThread:20168 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program_abspath': 'D:\\final-design\\yolov5-mask-42-master\\yolov5-mask-42-master\\train.py', 'program': 'train.py'}
+2023-11-07 19:36:52,767 INFO    MainThread:20168 [wandb_setup.py:_flush():76] Applying login settings: {'login_timeout': 30}
+2023-11-07 19:36:52,767 INFO    MainThread:20168 [wandb_init.py:_log_setup():528] Logging user logs to D:\final-design\yolov5-mask-42-master\yolov5-mask-42-master\wandb\run-20231107_193652-8iiso8ys\logs\debug.log
+2023-11-07 19:36:52,767 INFO    MainThread:20168 [wandb_init.py:_log_setup():529] Logging internal logs to D:\final-design\yolov5-mask-42-master\yolov5-mask-42-master\wandb\run-20231107_193652-8iiso8ys\logs\debug-internal.log
+2023-11-07 19:36:52,767 INFO    MainThread:20168 [wandb_init.py:init():568] calling init triggers
+2023-11-07 19:36:52,767 INFO    MainThread:20168 [wandb_init.py:init():575] wandb.init called with sweep_config: {}
+config: {'weights': 'pretrained/yolov5s.pt', 'cfg': 'D:\\final-design\\yolov5-mask-42-master\\yolov5-mask-42-master\\models\\helmet_yolov5s.yaml', 'data': 'D:\\final-design\\yolov5-mask-42-master\\yolov5-mask-42-master\\data\\helmet_data.yaml', 'hyp': {'lr0': 0.01, 'lrf': 0.1, 'momentum': 0.937, 'weight_decay': 0.0005, 'warmup_epochs': 3.0, 'warmup_momentum': 0.8, 'warmup_bias_lr': 0.1, 'box': 0.05, 'cls': 0.5, 'cls_pw': 1.0, 'obj': 1.0, 'obj_pw': 1.0, 'iou_t': 0.2, 'anchor_t': 4.0, 'fl_gamma': 0.0, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.1, 'scale': 0.5, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.0, 'copy_paste': 0.0}, 'epochs': 100, 'batch_size': 4, 'imgsz': 640, 'rect': False, 'resume': False, 'nosave': False, 'noval': False, 'noautoanchor': False, 'evolve': None, 'bucket': '', 'cache': None, 'image_weights': False, 'device': '', 'multi_scale': True, 'single_cls': False, 'adam': False, 'sync_bn': False, 'workers': 0, 'project': 'runs\\train', 'name': 'exp', 'exist_ok': False, 'quad': False, 'linear_lr': False, 'label_smoothing': 0.0, 'patience': 100, 'freeze': 0, 'save_period': -1, 'local_rank': -1, 'entity': None, 'upload_dataset': False, 'bbox_interval': -1, 'artifact_alias': 'latest', 'save_dir': 'runs\\train\\exp13'}
+2023-11-07 19:36:52,767 INFO    MainThread:20168 [wandb_init.py:init():618] starting backend
+2023-11-07 19:36:52,767 INFO    MainThread:20168 [wandb_init.py:init():622] setting up manager
+2023-11-07 19:36:52,767 INFO    MainThread:20168 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2023-11-07 19:36:52,767 INFO    MainThread:20168 [wandb_init.py:init():628] backend started and connected
+2023-11-07 19:36:52,767 INFO    MainThread:20168 [wandb_init.py:init():720] updated telemetry
+2023-11-07 19:36:52,783 INFO    MainThread:20168 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2023-11-07 19:38:23,591 ERROR   MainThread:20168 [wandb_init.py:init():779] encountered error: Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2023-11-07 19:38:23,712 ERROR   MainThread:20168 [wandb_init.py:init():1188] Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+Traceback (most recent call last):
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\wandb\sdk\wandb_init.py", line 1170, in init
+    run = wi.init()
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\wandb\sdk\wandb_init.py", line 785, in init
+    raise error
+wandb.errors.CommError: Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2023-11-07 19:38:24,741 WARNING MsgRouterThr:20168 [router.py:message_loop():77] message_loop has been closed

@@ -1,0 +1,6 @@
+2023-11-07 19:41:35,830 INFO    StreamThr :13632 [internal.py:wandb_internal():86] W&B internal server running at pid: 13632, started at: 2023-11-07 19:41:35.830225
+2023-11-07 19:41:35,830 DEBUG   HandlerThread:13632 [handler.py:handle_request():146] handle_request: status
+2023-11-07 19:41:35,834 INFO    WriterThread:13632 [datastore.py:open_for_write():85] open: D:\final-design\yolov5-mask-42-master\yolov5-mask-42-master\wandb\run-20231107_194135-gwhis8qa\run-gwhis8qa.wandb
+2023-11-07 19:41:35,834 DEBUG   SenderThread:13632 [sender.py:send():380] send: header
+2023-11-07 19:41:35,834 DEBUG   SenderThread:13632 [sender.py:send():380] send: run
+2023-11-07 19:41:35,842 INFO    SenderThread:13632 [sender.py:_maybe_setup_resume():759] checking resume status for None/train/gwhis8qa

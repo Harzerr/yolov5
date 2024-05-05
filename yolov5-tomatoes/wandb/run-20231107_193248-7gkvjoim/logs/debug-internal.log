@@ -1,0 +1,92 @@
+2023-11-07 19:32:48,374 INFO    StreamThr :640 [internal.py:wandb_internal():86] W&B internal server running at pid: 640, started at: 2023-11-07 19:32:48.373729
+2023-11-07 19:32:48,375 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: status
+2023-11-07 19:32:48,378 INFO    WriterThread:640 [datastore.py:open_for_write():85] open: D:\final-design\yolov5-mask-42-master\yolov5-mask-42-master\wandb\run-20231107_193248-7gkvjoim\run-7gkvjoim.wandb
+2023-11-07 19:32:48,379 DEBUG   SenderThread:640 [sender.py:send():380] send: header
+2023-11-07 19:32:48,380 DEBUG   SenderThread:640 [sender.py:send():380] send: run
+2023-11-07 19:32:48,387 INFO    SenderThread:640 [sender.py:_maybe_setup_resume():759] checking resume status for None/train/7gkvjoim
+2023-11-07 19:32:51,796 INFO    SenderThread:640 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\urllib3\connectionpool.py", line 777, in urlopen
+    self._prepare_proxy(conn)
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\urllib3\connectionpool.py", line 1046, in _prepare_proxy
+    conn.connect()
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\urllib3\connection.py", line 619, in connect
+    self.sock = sock = self._connect_tls_proxy(self.host, sock)
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\urllib3\connection.py", line 675, in _connect_tls_proxy
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\urllib3\connection.py", line 783, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\urllib3\util\ssl_.py", line 471, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\urllib3\util\ssl_.py", line 515, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\29660\.conda\envs\yolo5\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\29660\.conda\envs\yolo5\lib\ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "C:\Users\29660\.conda\envs\yolo5\lib\ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+OSError: [Errno 0] Error
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', OSError(0, 'Error'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\urllib3\connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ProxyError('Unable to connect to proxy', OSError(0, 'Error')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\wandb\sdk\internal\internal_api.py", line 366, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\wandb\sdk\lib\gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\requests\sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\29660\.conda\envs\yolo5\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ProxyError('Unable to connect to proxy', OSError(0, 'Error')))
+2023-11-07 19:32:53,405 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:32:58,453 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:33:03,500 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:33:08,531 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:33:13,578 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:33:18,615 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:33:23,651 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:33:28,693 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:33:33,733 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:33:38,769 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:33:43,817 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:33:48,865 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:33:53,924 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:33:58,970 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:34:04,020 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:34:09,066 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:34:14,113 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-07 19:34:19,161 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: cancel
+2023-11-07 19:34:19,161 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: cancel
+2023-11-07 19:34:19,161 DEBUG   SenderThread:640 [sender.py:send():389] Record cancelled: run
+2023-11-07 19:34:19,161 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: status_report
+2023-11-07 19:34:19,236 DEBUG   HandlerThread:640 [handler.py:handle_request():146] handle_request: shutdown
+2023-11-07 19:34:19,236 INFO    HandlerThread:640 [handler.py:finish():866] shutting down handler
+2023-11-07 19:34:20,172 INFO    WriterThread:640 [datastore.py:close():294] close: D:\final-design\yolov5-mask-42-master\yolov5-mask-42-master\wandb\run-20231107_193248-7gkvjoim\run-7gkvjoim.wandb
+2023-11-07 19:34:20,172 INFO    SenderThread:640 [sender.py:finish():1534] shutting down sender
